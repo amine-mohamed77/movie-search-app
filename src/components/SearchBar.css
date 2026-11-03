@@ -1,0 +1,66 @@
+form {
+  width: min(720px, calc(100% - 3rem));
+  margin: -1.75rem auto 0;
+  padding: 0.45rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(22, 34, 53, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 0.9rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+form input {
+  min-width: 0;
+  flex: 1;
+  padding: 0.9rem 1rem;
+  color: var(--text-h);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font: inherit;
+}
+
+form input::placeholder {
+  color: #8492a6;
+}
+
+form input:focus-visible {
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.55);
+  border-radius: 0.55rem;
+}
+
+form button {
+  padding: 0.85rem 1.35rem;
+  color: #1a1205;
+  background: var(--accent);
+  border: 0;
+  border-radius: 0.65rem;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+form button:hover {
+  background: #fbbf24;
+  transform: translateY(-1px);
+}
+
+form button:focus-visible {
+  outline: 3px solid rgba(245, 158, 11, 0.35);
+  outline-offset: 2px;
+}
+
+@media (max-width: 520px) {
+  form {
+    width: min(100% - 2rem, 30rem);
+  }
+
+  form button {
+    padding-inline: 1rem;
+  }
+}
